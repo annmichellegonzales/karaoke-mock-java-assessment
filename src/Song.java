@@ -1,15 +1,15 @@
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Song {
-//    public static void main(String[] args) {
-//
-//    }
+
 
     private String title;
     private String artist;
-    private List lyrics;
+    private List<String> lyrics;
 
-    public Song(String title, String artist, List lyrics) {
+    public Song(String title, String artist, List<String> lyrics) {
         this.title = title;
         this.artist = artist;
         this.lyrics = lyrics;
@@ -23,7 +23,7 @@ public class Song {
         return artist;
     }
 
-    public List getLyrics(List lyrics) {
+    public List<String> getLyrics() {
         return lyrics;
     }
 
@@ -32,19 +32,33 @@ public class Song {
     }
 
     public void setArtist(String artist) {
-        this.title=title;
+        this.artist=artist;
     }
 
-    public void setLyrics(List lyrics) {
+    public void setLyrics(List<String> lyrics) {
         this.lyrics=lyrics;
     }
 
-//    public static List parseLyrics(List Lyrics) {
+//    public static void parseLyrics(String lyrics) {
+//        String[] lyricsList = lyrics.split(" ");
+//        for (String lyric : lyricsList) {
+//            System.out.println(lyricsList);
+//        }
+
+        public static List<String> parseLyrics(String words) {
+            return Arrays.asList(words.split(" "));
+        }
+
+
+//    public static void main(String[] args) {
 //
-//        return title;
+//        Song nerdy = new Song("nerdy", "poison the well", "why do your eyes paralyze me");
+//
+//        System.out.println(nerdy.artist);
+//        System.out.println(nerdy.title);
+//        System.out.println(nerdy.lyrics);
+//        System.out.println(parseLyrics(nerdy));
+//
 //    }
-
-
-
 
 }
